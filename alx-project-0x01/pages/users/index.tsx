@@ -17,6 +17,7 @@ const Users: React.FC<{ posts: UserProps[] }> = ({ posts }) => {
           {posts?.map((user: UserProps) => (
             <UserCard key={user.id} user={user} />
           ))}
+          
         </div>
       </main>
     </div>
