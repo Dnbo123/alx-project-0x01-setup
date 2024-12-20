@@ -1,8 +1,7 @@
 import { UserData, UserModalProps } from "@/interfaces";
 import React, { useState } from "react";
-import { X } from 'lucide-react';
 
-const UserModal: React.FC <UserModalProps> = ({isOpen, onClose, onSubmit }) => {
+const UserModal: React.FC <UserModalProps> = ({ onClose, onSubmit }) => {
     const [formData, setFormData] = useState<Partial<UserData>>({
         name: '',
         username: '',
@@ -34,7 +33,7 @@ const UserModal: React.FC <UserModalProps> = ({isOpen, onClose, onSubmit }) => {
     onClose();
 };
 
-if(!isOpen) return null;
+if(!open) return null;
 
 return(
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -42,10 +41,11 @@ return(
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold text-gray-800">Add New User</h2>
         <button
+        type="button"
           onClick={onClose}
           className="text-gray-500 hover:text-gray-700"
         >
-          <X size={24} />
+        Click Here
         </button>
       </div>
 
