@@ -1,4 +1,3 @@
-// components/common/UserCard.tsx
 import React from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Building2, Globe, Mail, MapPin, Phone } from 'lucide-react';
