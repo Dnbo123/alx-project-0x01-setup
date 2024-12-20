@@ -2,17 +2,17 @@ import React from 'react';
 
 import { UserProps } from "@/interfaces";
 
-const UserCard: React.FC<{user: UserProps}> = ({ user }) => {
+const UserCard: React.FC<UserProps> = ({id, name, username, email, address, phone, website, company }) => {
     return (
       <div className="w-full max-w-xl hover:shadow-lg transition-shadow duration-300">
-        <h2 className="text-xl font-bold">{user.name}</h2>
-        <p className="text-gray-500">@{user.username}</p>
+        <h2 className="text-xl font-bold">{name}</h2>
+        <p className="text-gray-500">@{username}</p>
 
         <div className="flex items-start gap-2">
-            <span>{user.id}</span>
-            <span>{user.email}</span>
-            <span>{user.phone}</span>
-            <p>{user.address?.street}</p>
+            <span>{id}</span>
+            <span>{email}</span>
+            <span>{phone}</span>
+            <p>{address?.street}</p>
         </div>
         </div>
     )
